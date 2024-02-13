@@ -8,10 +8,20 @@
 
 ## 在容器中運行 composer 指令
 
-```
+```bash
+docker compose up -d
 docker compose exec app composer dump-autoload
+docker compose exec app composer update
 ```
 
 ## Reuqest -> Response Cycle
 
 使用三個類別來處理使用者的請求跟回應，由 Kernel 來處理 Reuqest, Response。
+
+## 使用 FastRoute 套件處理路由 
+
+https: //github.com/nikic/FastRoute
+
+```bash
+docker compose exec app composer require nikic/fast-route
+```
