@@ -5,6 +5,7 @@ declare(strict_types=1);
 use GaryClarke\Framework\Http\Kernel;
 use GaryClarke\Framework\Http\Request;
 use GaryClarke\Framework\Http\Response;
+use GaryClarke\Framework\Routing\Router;
 
 define('BASE_PATH', dirname(__DIR__));
 
@@ -13,13 +14,8 @@ require_once dirname(__DIR__) . '/vendor/autoload.php';
 // request 
 $request = Request::createFromGlobals();
 
-// logic 
+$router = new Router();
+$kernel = new Kernel($router);
 
-// response 
-// $content = '<h1>Hello World</h1>';
-// $response = new Response(content: $content, status: 200, headers: []);
-// $response->send();
-
-$kernel = new Kernel();
 $response = $kernel->handle($request);
 $response->send();

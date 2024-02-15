@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e3e91143d6fdf3f663f665eb0559778b",
+    "content-hash": "2880eca120e2482dd4cd777d1d559611",
     "packages": [
         {
             "name": "nikic/fast-route",
-            "version": "dev-master",
+            "version": "dev-hotfix",
             "source": {
                 "type": "git",
-                "url": "https://github.com/nikic/FastRoute.git",
-                "reference": "0e4448becf138690c6cbdc521175b07c2412c238"
+                "url": "https://github.com/KunYuChang/FastRoute.git",
+                "reference": "cb8552161c043b6997bbb66a954789cad1c76471"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/FastRoute/zipball/0e4448becf138690c6cbdc521175b07c2412c238",
-                "reference": "0e4448becf138690c6cbdc521175b07c2412c238",
+                "url": "https://api.github.com/repos/KunYuChang/FastRoute/zipball/cb8552161c043b6997bbb66a954789cad1c76471",
+                "reference": "cb8552161c043b6997bbb66a954789cad1c76471",
                 "shasum": ""
             },
             "require": {
@@ -34,7 +34,6 @@
                 "phpstan/phpstan-strict-rules": "^1.5",
                 "phpunit/phpunit": "^10.3"
             },
-            "default-branch": true,
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -42,14 +41,19 @@
                 }
             },
             "autoload": {
-                "files": [
-                    "src/functions.php"
-                ],
                 "psr-4": {
                     "FastRoute\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "FastRoute\\Benchmark\\": "benchmark/",
+                    "FastRoute\\Test\\": "test/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -65,10 +69,9 @@
                 "routing"
             ],
             "support": {
-                "issues": "https://github.com/nikic/FastRoute/issues",
-                "source": "https://github.com/nikic/FastRoute/tree/master"
+                "source": "https://github.com/KunYuChang/FastRoute/tree/hotfix"
             },
-            "time": "2024-02-06T21:23:15+00:00"
+            "time": "2024-02-15T10:05:08+00:00"
         },
         {
             "name": "psr/simple-cache",
